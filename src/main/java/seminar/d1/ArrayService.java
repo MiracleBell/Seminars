@@ -1,7 +1,5 @@
 package seminar.d1;
 
-import java.util.Arrays;
-import java.util.Comparator;
 
 public class ArrayService {
     public int getSumPositiveElements(int[] array) {

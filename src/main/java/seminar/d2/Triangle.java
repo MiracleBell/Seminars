@@ -1,5 +1,7 @@
 package seminar.d2;
 
+import java.util.Objects;
+
 public class Triangle {
     private Point2D a;
     private Point2D b;
@@ -13,9 +15,7 @@ public class Triangle {
 
 
     public Triangle(Point2D a, Point2D b, Point2D c) throws NullPointerException {
-        if (a == null ||
-                b == null ||
-                c == null) {
+        if (a == null || b == null || c == null) {
             throw new NullPointerException("Переданная точка ссылается на null");
         }
         this.vx = a.getX() - b.getX();
@@ -28,7 +28,6 @@ public class Triangle {
         if (Double.compare(vx * ux, vy * uy) == 0) {
             throw new IllegalArgumentException("По данным точкам невозможно построить треугольник, т.к. точки лижат на одной прямой");
         }
-
 
         this.a = a;
         this.b = b;
@@ -60,10 +59,33 @@ public class Triangle {
     }
 
     public double getSquare() {
-        return ux * vy - uy * vx;
+        return Math.abs(ux * vy - uy * vx);
     }
 
     public boolean isRectangular() {
-        return (vx * ux + vy * uy == 0);
+        return (vx * ux + vy * uy == 0 ||
+                ux * kx + uy * ky == 0 ||
+                kx * vx + ky * vy == 0);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Triangle triangle = (Triangle) o;
+        return Double.compare(triangle.vx, vx) == 0 &&
+                Double.compare(triangle.vy, vy) == 0 &&
+                Double.compare(triangle.ux, ux) == 0 &&
+                Double.compare(triangle.uy, uy) == 0 &&
+                Double.compare(triangle.kx, kx) == 0 &&
+                Double.compare(triangle.ky, ky) == 0 &&
+                Objects.equals(a, triangle.a) &&
+                Objects.equals(b, triangle.b) &&
+                Objects.equals(c, triangle.c);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(a, b, c, vx, vy, ux, uy, kx, ky);
     }
 }

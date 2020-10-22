@@ -1,5 +1,7 @@
 package seminar.d2;
 
+import java.util.Objects;
+
 public class Point2D {
     private double x;
     private double y;
@@ -32,5 +34,19 @@ public class Point2D {
 
     public double getDistance(Point2D point) {
         return Math.sqrt(Math.pow(point.x - x, 2) + Math.pow(point.y - y, 2));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Point2D point2D = (Point2D) o;
+        return Double.compare(point2D.x, x) == 0 &&
+                Double.compare(point2D.y, y) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
     }
 }

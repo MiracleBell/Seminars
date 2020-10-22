@@ -13,6 +13,7 @@ public class ArrayService {
 
     public static int arrayElementsInInterval(double[] array, double a, double b) {
         int counter = 0;
+
         for (double item : array) {
             if (item >= a && item <= b) {
                 counter++;
