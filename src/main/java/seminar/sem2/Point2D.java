@@ -1,4 +1,4 @@
-package seminar.d2;
+package seminar.sem2;
 
 import java.util.Objects;
 

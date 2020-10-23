@@ -1,4 +1,4 @@
-package seminar.d2;
+package seminar.sem2;
 
 public class ArrayService {
     public static boolean isOrdered(int[] array) {
@@ -14,8 +14,8 @@ public class ArrayService {
     public static int arrayElementsInInterval(double[] array, double a, double b) {
         int counter = 0;
 
-        for (double item : array) {
-            if (item >= a && item <= b) {
+        for (double elem : array) {
+            if (elem >= a && elem <= b) {
                 counter++;
             }
         }
