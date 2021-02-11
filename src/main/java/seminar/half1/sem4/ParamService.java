@@ -1,4 +1,4 @@
-package seminar.sem4.task;
+package seminar.half1.sem4;
 
 public class ParamService {
     public static Param[] parse(String str) {

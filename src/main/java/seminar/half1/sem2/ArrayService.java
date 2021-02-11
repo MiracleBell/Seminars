@@ -1,4 +1,4 @@
-package seminar.sem2;
+package seminar.half1.sem2;
 
 public class ArrayService {
     public static boolean isOrdered(int[] array) {

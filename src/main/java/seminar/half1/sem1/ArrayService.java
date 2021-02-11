@@ -1,4 +1,4 @@
-package seminar.sem1;
+package seminar.half1.sem1;
 
 
 public class ArrayService {

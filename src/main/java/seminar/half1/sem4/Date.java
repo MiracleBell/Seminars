@@ -1,4 +1,4 @@
-package seminar.sem4.classwork;
+package seminar.half1.sem4;
 //Констурктор по трем числам
 //Конструктор по строке вида dd.mm.yy
 //Проверка года на високосность

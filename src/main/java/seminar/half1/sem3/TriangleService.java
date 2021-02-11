@@ -1,7 +1,7 @@
-package seminar.sem3;
+package seminar.half1.sem3;
 
-import seminar.sem2.Point2D;
-import seminar.sem2.Triangle;
+import seminar.half1.sem2.Point2D;
+import seminar.half1.sem2.Triangle;
 
 
 //Тест в начале семинара

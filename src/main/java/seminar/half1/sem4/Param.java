@@ -1,4 +1,4 @@
-package seminar.sem4.task;
+package seminar.half1.sem4;
 
 public class Param {
     private String name;
