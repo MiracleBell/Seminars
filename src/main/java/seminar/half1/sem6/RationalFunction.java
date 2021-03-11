@@ -30,7 +30,7 @@ public class RationalFunction implements IDerivable {
     }
 
     // (f/g)'=(f'g-fg')g^2
-    @Override
+    /*@Override
     public IFunction derive() {
         try {
             return new RationalFunction(
@@ -44,7 +44,7 @@ public class RationalFunction implements IDerivable {
 //            supress the exception
         }
         return null;
-    }
+    }*/
 
     @Override
     public boolean inDomain(double x) {
@@ -71,5 +71,10 @@ public class RationalFunction implements IDerivable {
     @Override
     public int hashCode() {
         return Objects.hash(up, down);
+    }
+
+    @Override
+    public IFunction derive() {
+        return null;
     }
 }
